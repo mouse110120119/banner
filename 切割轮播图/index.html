@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+  <!-- 布局 -->
+  <div class="banner">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+
+  <script>
+    const ulArr = document.querySelectorAll('ul')
+
+    ulArr.forEach((item, index) => {
+      item.style.transition = `all 1s linear ${index * 0.2}s`
+    })
+
+    let count = 0
+
+    autoLoop()
+    function autoLoop () {
+      setInterval(() => {
+        count++
+        ulArr.forEach(item => {
+          item.style.transform = `rotateX(${count * 90}deg)`
+        })
+      }, 5000)
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul, ol, li {
+      list-style: none;
+    }
+
+    a, a:active, a:hover, a:link, a:visited {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .banner {
+      width: 600px;
+      height: 400px;
+
+      border: 10px solid pink;
+      margin: 30px auto;
+
+      position: relative;
+    }
+
+    .banner > .imgBox {
+      width: 100%;
+      height: 100%;
+    }
+
+    .banner > .imgBox > li {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      opacity: 0;
+
+      transition: opacity 1s linear;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 100px;
+    }
+
+    .banner > .pointBox {
+      height: 20px;
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, .4);
+      border-radius: 10px;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      z-index: 999;
+    }
+
+    .banner > .pointBox > li {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    .banner > .pointBox > li.active {
+      background-color: skyblue;
+    }
+
+    .banner > .leftRightBox {
+      width: 100%;
+      height: 40px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      z-index: 999;
+    }
+
+    .banner > .leftRightBox > a {
+      width: 20px;
+      height: 40px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #fff;
+
+      background-color: rgba(0, 0, 0, .4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <ul class="imgBox">
+      <li style="opacity: 1; z-index: 100; background-color: red;">1</li>
+      <li style="background-color: orange;">2</li>
+      <li style="background-color: skyblue;">3</li>
+      <li style="background-color: yellow;">4</li>
+      <li style="background-color: purple;">5</li>
+    </ul>
+
+    <ol class="pointBox"></ol>
+
+    <div class="leftRightBox">
+      <a href="javascript:;" class="left"><</a>
+      <a href="javascript:;" class="right">></a>
+    </div>
+  </div>
+
+  <script src="./banner.js"></script>
+  <script>
+    const b = new Banner('.banner')
+    console.log(b)
+  </script>
+</body>
+</html>

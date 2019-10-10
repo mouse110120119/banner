@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul, li, ol {
+      list-style: none;
+    }
+
+    a, a:hover, a:active, a:visited, a:link {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .banner {
+      width: 600px;
+      height: 400px;
+      border: 10px solid pink;
+      margin: 30px auto;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner > .imgBox {
+      width: 500%;
+      height: 100%;
+      position: absolute;
+
+      left: 0;
+      top: 0;
+    }
+
+    .banner > .imgBox > li {
+      width: 600px;
+      height: 100%;
+      background-color: pink;
+      float: left;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 100px;
+    }
+
+    .banner > .pointBox {
+      height: 20px;
+      background-color: rgba(0, 0, 0, .4);
+
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+
+      transform: translateX(-50%);
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      border-radius: 10px;
+    }
+
+    .banner > .pointBox > li {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    .banner > .pointBox > li.active {
+      background-color: skyblue;
+    }
+
+    .banner > .leftRightBox {
+      width: 100%;
+      height: 40px;
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .banner > .leftRightBox > a {
+      width: 20px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .4);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+
+    .dian li{
+      width: 16px;
+      height: 16px;
+      background-color: #C7D2D8;
+      border: 1px solid rgb(19, 236, 153);
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="banner">
+    <ul class="imgBox">
+      <li style="background-color: red">1</li>
+      <li style="background-color: orange">2</li>
+      <li style="background-color: pink">3</li>
+      <li style="background-color: skyblue">4</li>
+      <li style="background-color: yellow">5</li>
+    </ul>
+
+    <ol class="pointBox"></ol>
+
+    <div class="leftRightBox">
+      <!--
+        a 标签是页面中很特殊的标签
+          href 属性是很多样
+            完整路径地址  https://www.baidu.com
+            相对路径地址  ./index.html
+            hash 形式路径(锚点) #abc
+            javascript:;  当你点击的时候执行一段 js 代码 :; 中间写你要执行的 js 代码
+            空字符串  跳转到本页面 刷新页面
+            tel: 手机号 可以拨打电话的
+      -->
+      <a href="javascript:;" class="left"><</a>
+      <a href="javascript:;" class="right">></a>
+    </div>
+  </div>
+
+
+  <div class="banner banner2">
+    <ul class="imgBox">
+      <li style="background-color: red">1</li>
+      <li style="background-color: orange">2</li>
+      <li style="background-color: pink">3</li>
+      <li style="background-color: skyblue">4</li>
+      <li style="background-color: yellow">5</li>
+      <li style="background-color: blue">6</li>
+    </ul>
+
+    <ol class="pointBox"></ol>
+
+    <div class="leftRightBox">
+      <!--
+        a 标签是页面中很特殊的标签
+          href 属性是很多样
+            完整路径地址  https://www.baidu.com
+            相对路径地址  ./index.html
+            hash 形式路径(锚点) #abc
+            javascript:;  当你点击的时候执行一段 js 代码 :; 中间写你要执行的 js 代码
+            空字符串  跳转到本页面 刷新页面
+            tel: 手机号 可以拨打电话的
+      -->
+      <a href="javascript:;" class="left"><</a>
+      <a href="javascript:;" class="right">></a>
+    </div>
+  </div>
+
+  <ul class="dian">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <!--
+    相对路径表示方法
+      banner.js  直接替换当前路径
+      ./banner.js 再当前目录下寻找
+
+      ../banner.js 上一级目录查找
+
+      /banner.js 表示从根目录开始查找
+  -->
+  <!-- <script src="./utils.js"></script>
+  <script src="./banner.js"></script>
+  <script>
+    new Banner('.banner')
+
+    new Banner('.banner2') -->
+  </script>
+</body>
+</html>

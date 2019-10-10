@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.banner {
+  width: 520px;
+  height: 280px;
+
+  margin: 30px auto;
+
+  perspective: 1200px;
+  position: relative;
+}
+
+.banner > ul {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform-style: preserve-3d;
+
+}
+
+.banner > ul:nth-child(2) {
+  top: 0;
+  left: 103px;
+}
+
+.banner > ul:nth-child(3) {
+  top: 0;
+  left: 206px;
+}
+
+.banner > ul:nth-child(4) {
+  top: 0;
+  left: 309px;
+}
+
+.banner > ul:nth-child(5) {
+  top: 0;
+  left: 412px;
+}
+
+.banner > ul > li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* 在 3d 情况下背面不可见 */
+  backface-visibility: hidden;
+}
+
+
+/* 第一套 */
+.banner > ul:nth-child(1) > li:nth-child(1) {
+  transform: rotateX(0deg) translateZ(140px);
+  background: url(./imgs/01.jpg) no-repeat;
+}
+
+.banner > ul:nth-child(1) > li:nth-child(2) {
+  transform: rotateX(-90deg) translateZ(140px);
+  background: url(./imgs/02.jpg) no-repeat;
+}
+
+.banner > ul:nth-child(1) > li:nth-child(3) {
+  transform: rotateX(-180deg) translateZ(140px);
+  background: url(./imgs/03.jpg) no-repeat;
+}
+
+.banner > ul:nth-child(1) > li:nth-child(4) {
+  background: url(./imgs/04.jpg) no-repeat;
+  transform: rotateX(-270deg) translateZ(140px);
+}
+
+
+/* 第二套 */
+.banner > ul:nth-child(2) > li:nth-child(1) {
+  transform: rotateX(0deg) translateZ(140px);
+  background: url(./imgs/01.jpg) no-repeat -104px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(2) > li:nth-child(2) {
+  transform: rotateX(-90deg) translateZ(140px);
+  background: url(./imgs/02.jpg) no-repeat -104px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(2) > li:nth-child(3) {
+  transform: rotateX(-180deg) translateZ(140px);
+  background: url(./imgs/03.jpg) no-repeat -104px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(2) > li:nth-child(4) {
+  background: url(./imgs/04.jpg) no-repeat -104px 0px / 520px 280px;
+  transform: rotateX(-270deg) translateZ(140px);
+}
+
+/* 第三套 */
+.banner > ul:nth-child(3) > li:nth-child(1) {
+  transform: rotateX(0deg) translateZ(140px);
+  background: url(./imgs/01.jpg) no-repeat -208px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(3) > li:nth-child(2) {
+  transform: rotateX(-90deg) translateZ(140px);
+  background: url(./imgs/02.jpg) no-repeat -208px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(3) > li:nth-child(3) {
+  transform: rotateX(-180deg) translateZ(140px);
+  background: url(./imgs/03.jpg) no-repeat -208px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(3) > li:nth-child(4) {
+  background: url(./imgs/04.jpg) no-repeat -208px 0px / 520px 280px;
+  transform: rotateX(-270deg) translateZ(140px);
+}
+
+/* 第四套 */
+.banner > ul:nth-child(4) > li:nth-child(1) {
+  transform: rotateX(0deg) translateZ(140px);
+  background: url(./imgs/01.jpg) no-repeat -312px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(4) > li:nth-child(2) {
+  transform: rotateX(-90deg) translateZ(140px);
+  background: url(./imgs/02.jpg) no-repeat -312px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(4) > li:nth-child(3) {
+  transform: rotateX(-180deg) translateZ(140px);
+  background: url(./imgs/03.jpg) no-repeat -312px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(4) > li:nth-child(4) {
+  background: url(./imgs/04.jpg) no-repeat -312px 0px / 520px 280px;
+  transform: rotateX(-270deg) translateZ(140px);
+}
+
+
+/* 第五套 */
+.banner > ul:nth-child(5) > li:nth-child(1) {
+  transform: rotateX(0deg) translateZ(140px);
+  background: url(./imgs/01.jpg) no-repeat -416px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(5) > li:nth-child(2) {
+  transform: rotateX(-90deg) translateZ(140px);
+  background: url(./imgs/02.jpg) no-repeat -416px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(5) > li:nth-child(3) {
+  transform: rotateX(-180deg) translateZ(140px);
+  background: url(./imgs/03.jpg) no-repeat -416px 0px / 520px 280px;
+}
+
+.banner > ul:nth-child(5) > li:nth-child(4) {
+  background: url(./imgs/04.jpg) no-repeat -416px 0px / 520px 280px;
+  transform: rotateX(-270deg) translateZ(140px);
+}

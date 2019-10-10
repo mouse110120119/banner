@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div>
+    点我试试
+  </div>
+
+
+  <script>
+    /*
+      动的肯定是 opacity
+
+      上一张消失 opacity = 0
+      下一张显示 opacity = 1
+
+      1. setPoint
+      2. 动起来（运动结束之后，焦点对应）
+      3. 移入移出
+      4. 左右按钮
+      5. 点击焦点
+    */
+
+
+    const div = document.querySelector('div')
+
+    div.addEventListener('click', () => {
+      console.log('你好')
+    })
+
+    div.addEventListener('click', () => {
+      console.log('你好')
+    })
+
+    div.addEventListener('click', () => {
+      console.log('你好')
+    })
+
+
+  </script>
+</body>
+</html>
